@@ -4,6 +4,6 @@
 
 @layer components {
   .navbar_list {
-    @apply capitalize mx-3;
+    @apply mx-3 cursor-pointer text-base capitalize text-PaleSky hover:text-Shark;
   }
 }

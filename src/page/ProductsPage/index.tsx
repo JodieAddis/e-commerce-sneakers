@@ -4,14 +4,25 @@ import ProductsDescription from "../../components/Products/ProductsDescription";
 const Page = () => {
   return (
     <div className="h-screen">
-      <header className="bg-gray-600">
+      <header className="mx-32 mt-8 flex-auto">
         <Header />
+        <hr className="mt-10" />
       </header>
-      <main className="bg-yellow-300 flex justify-center flex-1">
+      <main className="my-auto flex flex-1 flex-row items-center justify-center">
+        <p>Products Pictures</p>
         <ProductsDescription />
       </main>
-      <footer className="flex justify-center">
-        <p>Application coded by Jodie Addis</p>
+      <footer className="my-4 flex flex-auto justify-center">
+        <p className="text-sm">
+          Application coded by
+          <a
+            href="https://github.com/JodieAddis"
+            target="blank_"
+            className="ml-1 hover:font-bold hover:text-Pumpkin"
+          >
+            Jodie Addis
+          </a>
+        </p>
       </footer>
     </div>
   );
