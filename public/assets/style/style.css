@@ -6,4 +6,7 @@
   .navbar_list {
     @apply mx-3 cursor-pointer text-base capitalize text-PaleSky hover:text-Shark;
   }
+  .product_list {
+    @apply h-20 w-20 cursor-pointer rounded-lg;
+  }
 }

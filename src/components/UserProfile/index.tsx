@@ -4,13 +4,13 @@ import ProfilePicture from "../../../public/assets/img/image-avatar.png";
 const Component = () => {
   return (
     <>
-      <div className="flex items-center mr-10">
-        <IconCart />
+      <div className="mr-10 flex items-center">
+        <IconCart color="#000000" />
       </div>
       <img
         src={ProfilePicture}
         alt="Picture of the user"
-        className="w-12 h-12 border-Pumpkin border-solid border-2 rounded-full"
+        className="h-12 w-12 cursor-pointer rounded-full hover:border-2 hover:border-solid hover:border-Pumpkin"
       />
     </>
   );
