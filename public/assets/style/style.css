@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar_list {
+    @apply mx-3 cursor-pointer text-base capitalize text-PaleSky hover:text-Shark;
+  }
+}
