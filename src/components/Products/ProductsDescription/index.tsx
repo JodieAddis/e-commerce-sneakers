@@ -20,7 +20,7 @@ const Component = () => {
           content="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
           css="text-base text-PaleSky mt-8"
         />
-        <div className="flex flex-row justify-between lg:flex-row">
+        <div className="lg:flex-colnp flex flex-row justify-between">
           <div className="mt-8 flex flex-row">
             <Paragraph content="$125.00" css="text-Shark text-3xl font-bold" />
             <div className="ml-4 flex items-center lg:ml-6">

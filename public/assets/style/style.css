@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .navbar_list {
+  .navbar_desktop {
     @apply mx-3 cursor-pointer text-base capitalize text-PaleSky hover:text-Shark;
+  }
+  .navbar_mobile {
+    @apply cursor-pointer text-lg font-bold capitalize text-Shark;
   }
   .product_list {
     @apply h-20 w-20 cursor-pointer rounded-lg;

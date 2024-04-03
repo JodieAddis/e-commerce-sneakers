@@ -4,7 +4,7 @@ import ProfilePicture from "../../../public/assets/img/image-avatar.png";
 const Component = () => {
   return (
     <>
-      <div className="mr-6 flex items-center lg:mr-10">
+      <div className="mr-6 flex cursor-pointer items-center lg:mr-10">
         <IconCart color="#69707D" />
       </div>
       <div className="mr-8 flex items-center lg:mr-0">
