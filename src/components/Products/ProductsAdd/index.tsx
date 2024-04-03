@@ -5,7 +5,7 @@ import IconMinus from "../../../icons/IconMinus";
 const Component = () => {
   return (
     <>
-      <div className="flex h-14 w-[150px] flex-row justify-between rounded-lg bg-LinkWater">
+      <div className="mb-3 flex h-14 w-[327px] flex-row justify-between rounded-lg bg-LinkWater lg:mb-0 lg:w-[150px]">
         <div className="ml-4 flex cursor-pointer items-center">
           <IconMinus />
         </div>
@@ -14,7 +14,7 @@ const Component = () => {
           <IconAdd />
         </div>
       </div>
-      <button className="flex h-14 w-[272px] flex-row items-center justify-center rounded-lg bg-Pumpkin text-base font-bold text-white hover:bg-AtomicTangerine">
+      <button className="flex h-14 w-[327px] flex-row items-center justify-center rounded-lg bg-Pumpkin text-base font-bold text-white hover:bg-AtomicTangerine lg:w-[272px]">
         <IconCart color="#ffffff" />
         <p className="ml-4">Add to cart</p>
       </button>

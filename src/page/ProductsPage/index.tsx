@@ -1,19 +1,23 @@
+import Caroussel from "../../components/Caroussel";
 import Header from "../../components/Header";
 import ProductsDescription from "../../components/Products/ProductsDescription";
+import ProductsPictures from "../../components/Products/ProductsPictures";
+import useScreenSize from "../../hook/useScreenSize";
 
 const Page = () => {
+  const isMobile = useScreenSize();
   return (
-    <div className="h-screen">
-      <header className="mx-32 mt-8 flex-auto">
+    <div className="flex h-screen flex-col ">
+      <header className="lg:mx-32 lg:mt-8">
         <Header />
-        <hr className="mt-10" />
+        <hr className="mt-6 lg:mt-10" />
       </header>
-      <main className="my-auto flex flex-1 flex-row items-center justify-center">
-        <p>Products Pictures</p>
+      <main className="flex flex-1 flex-col items-center justify-around lg:mx-40 lg:my-28 lg:flex-row">
+        {isMobile ? <Caroussel /> : <ProductsPictures />}
         <ProductsDescription />
       </main>
-      <footer className="my-4 flex flex-auto justify-center">
-        <p className="text-sm">
+      <footer className="my-2 flex h-14 justify-center">
+        <p className="flex items-center text-sm">
           Application coded by
           <a
             href="https://github.com/JodieAddis"
