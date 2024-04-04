@@ -1,12 +1,35 @@
-import product_1 from "../../../public/assets/img/image-product-1.jpg";
+import IconNext from "../../icons/IconNext";
+import IconPrevious from "../../icons/IconPrevious";
+import { useState } from "react";
 
-const Component = () => {
+interface CarouselProps {
+  img: string[];
+  cssBtn: string;
+  cssImg?: string;
+}
+
+const Component = ({ img, cssBtn, cssImg }: CarouselProps) => {
+  const [index, setIndex] = useState(0);
+
+  //img correspond à un array dans lequel sont regroupés les path vers les images
+  const prevSlide = () => {
+    setIndex((prevIndex) => (prevIndex === 0 ? img.length - 1 : prevIndex - 1));
+  };
+
+  const nextSlide = () => {
+    setIndex((prevIndex) => (prevIndex === img.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
-    <>
-      <div className="mb-5">
-        <img src={product_1} alt="image of the product" className="" />
-      </div>
-    </>
+    <div className="flex flex-row items-center">
+      <button className={`${cssBtn} left-0`} onClick={prevSlide}>
+        <IconPrevious />
+      </button>
+      <img src={img[index]} alt={`Slide ${index}`} className={`${cssImg}`} />
+      <button className={`${cssBtn} right-0`} onClick={nextSlide}>
+        <IconNext />
+      </button>
+    </div>
   );
 };
 
