@@ -2,20 +2,13 @@ import IconNext from "../../icons/IconNext";
 import IconPrevious from "../../icons/IconPrevious";
 import { useState } from "react";
 
-// interface CarouselProps {
-//   img: string[];
-//   cssBtn: string;
-//   cssImg: string;
-// }
-import { ExtendedCarouselProps } from "../../types";
+interface CarouselProps {
+  img: string[];
+  cssBtn: string;
+  cssImg?: string;
+}
 
-const Component: React.FC<ExtendedCarouselProps> = ({
-  img,
-  cssBtn,
-  cssImg,
-  width,
-  height,
-}) => {
+const Component = ({ img, cssBtn, cssImg }: CarouselProps) => {
   const [index, setIndex] = useState(0);
 
   //img correspond à un array dans lequel sont regroupés les path vers les images
@@ -28,13 +21,13 @@ const Component: React.FC<ExtendedCarouselProps> = ({
   };
 
   return (
-    <div className="flex flex-row items-center bg-Pumpkin">
+    <div className="flex flex-row items-center">
       <button className={`${cssBtn} left-0`} onClick={prevSlide}>
-        <IconPrevious width={width} height={height} />
+        <IconPrevious />
       </button>
       <img src={img[index]} alt={`Slide ${index}`} className={`${cssImg}`} />
       <button className={`${cssBtn} right-0`} onClick={nextSlide}>
-        <IconNext width={width} height={height} />
+        <IconNext />
       </button>
     </div>
   );

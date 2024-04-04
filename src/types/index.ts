@@ -1,7 +1,7 @@
-export interface IconWidthProps {
-  width: string;
-  height: string;
-}
+// export interface IconWidthProps {
+//   width?: string;
+//   height?: string;
+// }
 
 interface CarouselProps {
   img: string[];
@@ -9,4 +9,4 @@ interface CarouselProps {
   cssImg: string;
 }
 
-export interface ExtendedCarouselProps extends CarouselProps, IconWidthProps {}
+// export interface ExtendedCarouselProps extends CarouselProps, IconWidthProps {}

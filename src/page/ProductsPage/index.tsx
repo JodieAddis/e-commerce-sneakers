@@ -20,13 +20,7 @@ const Page = () => {
       <main className="flex flex-1 flex-col items-center justify-around lg:mx-40 lg:my-28 lg:flex-row">
         {isMobile ? (
           <div className="mb-3">
-            <Caroussel
-              cssBtn="mobile_carousel_btn"
-              img={productImg}
-              cssImg="w-[375px]"
-              width="6px"
-              height="12px"
-            />
+            <Caroussel cssBtn="mobile_carousel_btn" img={productImg} />
           </div>
         ) : (
           <ProductsPictures />
