@@ -5,6 +5,9 @@ const Component = () => {
   return (
     <>
       <div className="mr-6 flex cursor-pointer items-center lg:mr-10">
+        {/* <div className="h-3 w-5 rounded-lg bg-Pumpkin text-center text-xs font-bold text-white">
+          <p>3</p>
+        </div> */}
         <IconCart color="#69707D" />
       </div>
       <div className="mr-8 flex items-center lg:mr-0">

@@ -6,6 +6,7 @@ import useScreenSize from "../../hook/useScreenSize";
 import product_1 from "../../../public/assets/img/image-product-1.jpg";
 import product_2 from "../../../public/assets/img/image-product-2.jpg";
 import product_3 from "../../../public/assets/img/image-product-3.jpg";
+import ProductsContainer from "../../container/ProductsContainer";
 
 const Page = () => {
   const isMobile = useScreenSize();
@@ -25,7 +26,8 @@ const Page = () => {
         ) : (
           <ProductsPictures />
         )}
-        <ProductsDescription />
+        {/* <ProductsDescription /> */}
+        <ProductsContainer />
       </main>
       <footer className="my-2 flex h-14 justify-center">
         <p className="flex items-center text-sm">

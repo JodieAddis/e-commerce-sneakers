@@ -1,10 +1,10 @@
 import Heading from "../../../typographies/Heading";
 import Paragraph from "../../../typographies/Paragraph";
-import ProductsAdd from "../ProductsAdd";
+// import ProductsAdd from "../ProductsAdd";
 
 const Component = () => {
   return (
-    <section className="flex w-[327px] flex-col items-center justify-center lg:w-[445px]">
+    <section>
       <div className="flex flex-col">
         <Heading
           kind="h1"
@@ -38,9 +38,9 @@ const Component = () => {
           </div>
         </div>
       </div>
-      <div className="mt-8 flex flex-col justify-center lg:mt-14 lg:flex-row lg:justify-between">
+      {/* <div className="mt-8 flex flex-col justify-center lg:mt-14 lg:flex-row lg:justify-between">
         <ProductsAdd />
-      </div>
+      </div> */}
     </section>
   );
 };

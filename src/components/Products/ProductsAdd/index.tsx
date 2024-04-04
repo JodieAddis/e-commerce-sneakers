@@ -2,17 +2,39 @@ import IconAdd from "../../../icons/IconAdd";
 import IconCart from "../../../icons/IconCart";
 import IconMinus from "../../../icons/IconMinus";
 
+import { useState } from "react";
+
 const Component = () => {
+  const [counter, setCounter] = useState(0);
+
+  const incrementNumber = () => {
+    setCounter(counter + 1);
+  };
+
+  const decrementNumber = () => {
+    if (counter > 0) {
+      setCounter((prevCounter) => prevCounter - 1);
+    }
+  };
+
   return (
     <>
       <div className="mb-3 flex h-14 w-[327px] flex-row justify-between rounded-lg bg-LinkWater lg:mb-0 lg:w-[150px]">
-        <div className="ml-4 flex cursor-pointer items-center">
+        <button
+          className="ml-4 flex cursor-pointer items-center"
+          onClick={decrementNumber}
+        >
           <IconMinus />
-        </div>
-        <p className="flex items-center text-base font-bold text-Shark">5</p>
-        <div className="mr-4 flex cursor-pointer items-center">
+        </button>
+        <p className="flex items-center text-base font-bold text-Shark">
+          {counter}
+        </p>
+        <button
+          className="mr-4 flex cursor-pointer items-center"
+          onClick={incrementNumber}
+        >
           <IconAdd />
-        </div>
+        </button>
       </div>
       <button className="flex h-14 w-[327px] flex-row items-center justify-center rounded-lg bg-Pumpkin text-base font-bold text-white hover:bg-AtomicTangerine lg:w-[272px]">
         <IconCart color="#ffffff" />
