@@ -14,7 +14,7 @@ const Component = () => {
         <img
           src={ProfilePicture}
           alt="Picture of the user"
-          className="h-6 w-6 cursor-pointer rounded-full hover:border-2 hover:border-solid hover:border-Pumpkin lg:h-12 lg:w-12"
+          className="h-6 w-6 cursor-pointer rounded-full border-2 border-solid border-white hover:border-Pumpkin lg:h-12 lg:w-12"
         />
       </div>
     </>

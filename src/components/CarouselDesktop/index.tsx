@@ -6,12 +6,16 @@ import product_2 from "../../../public/assets/img/image-product-2.jpg";
 import product_3 from "../../../public/assets/img/image-product-3.jpg";
 import product_4 from "../../../public/assets/img/image-product-4.jpg";
 
-const Component = () => {
+interface CarouselDesktopProps {
+  isClosed: () => void;
+}
+
+const Component = ({ isClosed }: CarouselDesktopProps) => {
   const productImg = [product_1, product_2, product_3, product_4];
   return (
     <div className="absolute left-1/3 top-10">
       <div className=" mb-8 flex justify-end">
-        <button>
+        <button onClick={isClosed}>
           <IconClose color="#ffffff" />
         </button>
       </div>
