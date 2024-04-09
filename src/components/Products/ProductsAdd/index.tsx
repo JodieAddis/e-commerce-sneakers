@@ -1,11 +1,14 @@
+import { CountContext } from "../../../context/CountProductsContext";
 import IconAdd from "../../../icons/IconAdd";
 import IconCart from "../../../icons/IconCart";
 import IconMinus from "../../../icons/IconMinus";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 const Component = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState<number>(0);
+
+  const { count, updateCount } = useContext(CountContext);
 
   const incrementNumber = () => {
     setCounter(counter + 1);
@@ -15,6 +18,11 @@ const Component = () => {
     if (counter > 0) {
       setCounter((prevCounter) => prevCounter - 1);
     }
+  };
+
+  const handlClick = () => {
+    updateCount(counter);
+    console.log(counter);
   };
 
   return (
@@ -36,7 +44,10 @@ const Component = () => {
           <IconAdd />
         </button>
       </div>
-      <button className="flex h-14 w-[327px] flex-row items-center justify-center rounded-lg bg-Pumpkin text-base font-bold text-white hover:bg-AtomicTangerine lg:w-[272px]">
+      <button
+        className="flex h-14 w-[327px] flex-row items-center justify-center rounded-lg bg-Pumpkin text-base font-bold text-white hover:bg-AtomicTangerine lg:w-[272px]"
+        onClick={handlClick}
+      >
         <IconCart color="#ffffff" />
         <p className="ml-4">Add to cart</p>
       </button>
