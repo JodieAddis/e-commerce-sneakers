@@ -14,7 +14,7 @@ const Component = () => {
       <div className="mt-6 flex flex-row lg:mt-0">
         <UserProfile />
         <div className="absolute right-20 top-28">
-          <Cart Number="3" Sum="375.00" />
+          <Cart Number={4} />
         </div>
       </div>
     </div>
