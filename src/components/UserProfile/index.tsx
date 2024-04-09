@@ -1,14 +1,23 @@
 import IconCart from "../../icons/IconCart";
 import ProfilePicture from "../../../public/assets/img/image-avatar.png";
+import { useContext } from "react";
+import { CountContext } from "../../context/CountProductsContext";
 
-const Component = () => {
+interface UserProfileProps {
+  onclick: () => void;
+}
+
+const Component = ({ onclick }: UserProfileProps) => {
+  const { count } = useContext(CountContext);
   return (
     <>
       <div className="mr-6 flex cursor-pointer items-center lg:mr-10">
-        {/* <div className="h-3 w-5 rounded-lg bg-Pumpkin text-center text-xs font-bold text-white">
-          <p>3</p>
-        </div> */}
-        <IconCart color="#69707D" />
+        <button onClick={onclick}>
+          <div className="absolute right-52 top-9 my-1 rounded-lg bg-Pumpkin px-2 text-center text-[10px] font-bold text-white">
+            {count}
+          </div>
+          <IconCart color="#69707D" />
+        </button>
       </div>
       <div className="mr-8 flex items-center lg:mr-0">
         <img
