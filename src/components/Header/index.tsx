@@ -2,6 +2,7 @@ import NavBarDesktop from "../NavBarDesktop";
 import NavBarMobile from "../NavBarMobile";
 import UserProfile from "../UserProfile";
 import useScreenSize from "../../hook/useScreenSize";
+import Cart from "../Cart";
 
 const Component = () => {
   const isMobile = useScreenSize();
@@ -12,6 +13,9 @@ const Component = () => {
       </div>
       <div className="mt-6 flex flex-row lg:mt-0">
         <UserProfile />
+        <div className="absolute right-20 top-28">
+          <Cart Number="3" Sum="375.00" />
+        </div>
       </div>
     </div>
   );
