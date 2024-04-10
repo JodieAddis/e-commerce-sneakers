@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: KumbhSans;
+  src: url("../font/KumbhSans.ttf");
+}
+
+@layer base {
+  body {
+    @apply font-kumbh;
+  }
+}
+
 @layer components {
   .navbar_desktop {
     @apply mx-3 cursor-pointer text-base capitalize text-PaleSky hover:text-Shark;

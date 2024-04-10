@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# E-commerce Snearkers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the project
 
-Currently, two official plugins are available:
+<!-- All stories are hosted on Chromatic at this [URL](coming soon) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+(**Picture of the project coming soon**)
 
-## Expanding the ESLint configuration
+## Objectives
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [x] Open a lightbox gallery by clicking on the large product image
+- [x] Switch the large product image by clicking on the small thumbnail images
+- [x] Add items to the cart
+- [x] View the cart with items
+- [ ] Remove items from the cart
+- [x] View the optimal layout for the site depending on their device's screen size
+- [x] See hover states for all interactive elements on the page
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img src="https://skillicons.dev/icons?i=git,vite,html,tailwind,ts,react"/>

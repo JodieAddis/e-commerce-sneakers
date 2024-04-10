@@ -1,16 +1,11 @@
+import Button from "../Button";
 import IconDelete from "../../icons/IconDelete";
 import Paragraph from "../../typographies/Paragraph";
 import product from "../../../public/assets/img/image-product-1.jpg";
-import Button from "../Button";
 import { useContext } from "react";
 import { CountContext } from "../../context/CountProductsContext";
 
-// interface CartProps {
-//   Number: number;
-// }
-
 const Component = () => {
-  // const totalPrice = 125 * Number;
   const { count } = useContext(CountContext);
   const totalPrice = 125 * count;
 

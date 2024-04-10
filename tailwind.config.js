@@ -13,6 +13,9 @@ export default {
         LinkWater: "#F6F8FD",
       },
     },
+    fontFamily: {
+      kumbh: ["KumbhSans"],
+    },
   },
   plugins: [],
 };

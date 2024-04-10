@@ -12,5 +12,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const HeaderComponent: Story = {
-  name: "Display the word of the word chosen by the user, and the phonetic of this word",
+  name: "Header with navbar, logo of the application and the user profile",
 };

@@ -1,13 +1,15 @@
 import Carousel from "../../components/Carousel";
+import CarouselDesktop from "../../components/CarouselDesktop";
 import Header from "../../components/Header";
 import ProductsPictures from "../../components/Products/ProductsPictures";
-import useScreenSize from "../../hook/useScreenSize";
 import product_1 from "../../../public/assets/img/image-product-1.jpg";
 import product_2 from "../../../public/assets/img/image-product-2.jpg";
 import product_3 from "../../../public/assets/img/image-product-3.jpg";
 import product_4 from "../../../public/assets/img/image-product-4.jpg";
+import ProductsDescription from "../../components/Products/ProductsDescription";
 import ProductsContainer from "../../container/ProductsContainer";
-import CarouselDesktop from "../../components/CarouselDesktop";
+
+import useScreenSize from "../../hook/useScreenSize";
 import { useState } from "react";
 
 const Page = () => {
@@ -45,7 +47,12 @@ const Page = () => {
             )}
           </>
         )}
-        <ProductsContainer />
+        <div className="flex w-[327px] flex-col items-center justify-center lg:w-[445px]">
+          <ProductsDescription />
+          <div className="mt-8 flex flex-col justify-center lg:mt-14 lg:flex-row lg:justify-between">
+            <ProductsContainer />
+          </div>
+        </div>
       </main>
       <footer className="mb-5 mt-2 flex h-14 justify-center">
         <p className="flex items-center text-sm">
