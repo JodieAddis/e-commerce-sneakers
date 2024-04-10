@@ -13,7 +13,7 @@ const Component = ({ onclick }: UserProfileProps) => {
     <>
       <div className="mr-6 flex cursor-pointer items-center lg:mr-10">
         <button onClick={onclick}>
-          <div className="absolute right-52 top-9 my-1 rounded-lg bg-Pumpkin px-2 text-center text-[10px] font-bold text-white">
+          <div className="absolute right-16 top-4 my-1 rounded-lg bg-Pumpkin px-2 text-center text-[10px] font-bold text-white lg:right-52 lg:top-9">
             {count}
           </div>
           <IconCart color="#69707D" />
