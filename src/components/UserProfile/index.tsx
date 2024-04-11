@@ -1,7 +1,8 @@
 import IconCart from "../../icons/IconCart";
 import ProfilePicture from "../../../public/assets/img/image-avatar.png";
-import { useContext } from "react";
+
 import { CountContext } from "../../context/CountProductsContext";
+import { useContext } from "react";
 
 interface UserProfileProps {
   onclick: () => void;

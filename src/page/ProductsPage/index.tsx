@@ -1,11 +1,8 @@
 import Carousel from "../../components/Carousel";
 import CarouselDesktop from "../../components/CarouselDesktop";
 import Header from "../../components/Header";
+import { productImg } from "../../data";
 import ProductsPictures from "../../components/Products/ProductsPictures";
-import product_1 from "../../../public/assets/img/image-product-1.jpg";
-import product_2 from "../../../public/assets/img/image-product-2.jpg";
-import product_3 from "../../../public/assets/img/image-product-3.jpg";
-import product_4 from "../../../public/assets/img/image-product-4.jpg";
 import ProductsDescription from "../../components/Products/ProductsDescription";
 import ProductsContainer from "../../container/ProductsContainer";
 
@@ -14,9 +11,7 @@ import { useState } from "react";
 
 const Page = () => {
   const isMobile = useScreenSize();
-  const productImg = [product_1, product_2, product_3, product_4];
-
-  const [isCarouselVisible, setIsCarouselVisible] = useState(false);
+  const [isCarouselVisible, setIsCarouselVisible] = useState<boolean>(false);
 
   return (
     <div className="flex h-screen flex-col ">

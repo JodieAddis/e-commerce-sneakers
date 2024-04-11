@@ -9,9 +9,8 @@ interface CarouselProps {
 }
 
 const Component = ({ img, cssBtn, cssImg }: CarouselProps) => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState<number>(0);
 
-  //img correspond à un array dans lequel sont regroupés les path vers les images
   const prevSlide = () => {
     setIndex((prevIndex) => (prevIndex === 0 ? img.length - 1 : prevIndex - 1));
   };

@@ -1,14 +1,14 @@
-import IconMinus from "../../icons/IconMinus";
 import IconAdd from "../../icons/IconAdd";
 import IconCart from "../../icons/IconCart";
+import IconMinus from "../../icons/IconMinus";
 
-import { CountContext } from "../../context/CountProductsContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
+import useCount from "../../hook/useCount";
 
 const Component = () => {
   const [counter, setCounter] = useState<number>(0);
 
-  const { count, updateCount } = useContext(CountContext);
+  const { updateCount } = useCount();
 
   const incrementNumber = () => {
     setCounter(counter + 1);
@@ -22,7 +22,6 @@ const Component = () => {
 
   const handlClick = () => {
     updateCount(counter);
-    console.log(counter);
   };
 
   return (

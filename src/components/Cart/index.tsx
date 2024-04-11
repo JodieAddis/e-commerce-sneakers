@@ -2,12 +2,17 @@ import Button from "../Button";
 import IconDelete from "../../icons/IconDelete";
 import Paragraph from "../../typographies/Paragraph";
 import product from "../../../public/assets/img/image-product-1.jpg";
-import { useContext } from "react";
-import { CountContext } from "../../context/CountProductsContext";
+
+import useCount from "../../hook/useCount";
 
 const Component = () => {
-  const { count } = useContext(CountContext);
+  const { count, updateCount } = useCount();
+
   const totalPrice = 125 * count;
+
+  const removeItems = () => {
+    updateCount(0);
+  };
 
   return (
     <div className=" justify center flex w-[360px] flex-col rounded-xl bg-white shadow-lg">
@@ -30,7 +35,7 @@ const Component = () => {
           <div className="flex flex-row">
             <img
               src={product}
-              alt="product image"
+              alt="Picture of selected product"
               className="mr-4 h-12 w-12 rounded-md"
             />
             <div className="mr-5">
@@ -50,7 +55,9 @@ const Component = () => {
               </div>
             </div>
             <div className="flex cursor-pointer items-center">
-              <IconDelete />
+              <button onClick={removeItems}>
+                <IconDelete />
+              </button>
             </div>
           </div>
           <div className="my-8">

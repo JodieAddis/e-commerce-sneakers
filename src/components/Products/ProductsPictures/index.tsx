@@ -1,7 +1,4 @@
-import product_1 from "../../../../public/assets/img/image-product-1.jpg";
-import product_2 from "../../../../public/assets/img/image-product-2.jpg";
-import product_3 from "../../../../public/assets/img/image-product-3.jpg";
-import product_4 from "../../../../public/assets/img/image-product-1.jpg";
+import { productImg } from "../../../data";
 import { useState } from "react";
 
 interface ProductsPicturesProps {
@@ -9,9 +6,7 @@ interface ProductsPicturesProps {
 }
 
 const Component = ({ imageClicked }: ProductsPicturesProps) => {
-  const productImg = [product_1, product_2, product_3, product_4];
-
-  const [currentImage, setCurrentImage] = useState(product_1);
+  const [currentImage, setCurrentImage] = useState<string>(productImg[0]);
 
   return (
     <div className="flex flex-col">
@@ -26,7 +21,7 @@ const Component = ({ imageClicked }: ProductsPicturesProps) => {
           <img
             key={index}
             src={item}
-            alt=""
+            alt={`Picture of ${item}`}
             className="product_list"
             onClick={() => {
               setCurrentImage(item);

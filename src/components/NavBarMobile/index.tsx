@@ -1,11 +1,12 @@
-import { useState } from "react";
-import IconLogo from "../../icons/IconLogo";
-import IconMenu from "../../icons/IconMenu";
 import List from "../../typographies/List";
 import IconClose from "../../icons/IconClose";
+import IconLogo from "../../icons/IconLogo";
+import IconMenu from "../../icons/IconMenu";
+
+import { useState } from "react";
 
 const Component = () => {
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClicked, setIsClicked] = useState<boolean>(true);
   return (
     <div className="ml-8 mt-6 flex flex-row">
       <div className="mr-4 flex items-center">
