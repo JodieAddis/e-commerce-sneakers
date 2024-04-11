@@ -49,8 +49,8 @@ const Page = () => {
           </div>
         </div>
       </main>
-      <footer className="mb-5 mt-2 flex h-14 justify-center">
-        <p className="flex items-center text-sm">
+      <footer className=" mt-20 flex h-14 justify-center">
+        <p className="mb-3 flex items-center text-sm">
           Application coded by
           <a
             href="https://github.com/JodieAddis"

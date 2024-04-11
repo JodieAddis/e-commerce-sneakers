@@ -1,5 +1,4 @@
-import IconNext from "../../icons/IconNext";
-import IconPrevious from "../../icons/IconPrevious";
+import IconNextPrevious from "../../icons/IconNextPrevious";
 import { useState } from "react";
 
 interface CarouselProps {
@@ -22,11 +21,11 @@ const Component = ({ img, cssBtn, cssImg }: CarouselProps) => {
   return (
     <div className="flex flex-row items-center">
       <button className={`${cssBtn} left-0`} onClick={prevSlide}>
-        <IconPrevious />
+        <IconNextPrevious kind="previous" />
       </button>
       <img src={img[index]} alt={`Slide ${index}`} className={`${cssImg}`} />
       <button className={`${cssBtn} right-0`} onClick={nextSlide}>
-        <IconNext />
+        <IconNextPrevious kind="next" />
       </button>
     </div>
   );

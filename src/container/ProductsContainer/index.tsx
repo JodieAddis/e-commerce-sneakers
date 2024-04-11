@@ -1,6 +1,5 @@
-import IconAdd from "../../icons/IconAdd";
+import IconAddMinus from "../../icons/IconAddMinus";
 import IconCart from "../../icons/IconCart";
-import IconMinus from "../../icons/IconMinus";
 
 import { useState } from "react";
 import useCount from "../../hook/useCount";
@@ -31,7 +30,7 @@ const Component = () => {
           className="ml-4 flex cursor-pointer items-center"
           onClick={decrementNumber}
         >
-          <IconMinus />
+          <IconAddMinus kind="minus" />
         </button>
         <p className="flex items-center text-base font-bold text-Shark">
           {counter}
@@ -40,7 +39,7 @@ const Component = () => {
           className="mr-4 flex cursor-pointer items-center"
           onClick={incrementNumber}
         >
-          <IconAdd />
+          <IconAddMinus kind="add" />
         </button>
       </div>
       <button

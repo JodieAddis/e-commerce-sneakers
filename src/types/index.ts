@@ -1,5 +1,3 @@
-interface CarouselProps {
-  img: string[];
-  cssBtn: string;
-  cssImg: string;
+export interface IconProps {
+  kind: string;
 }
