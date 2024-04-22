@@ -3,6 +3,7 @@ import ProfilePicture from "../../../public/assets/img/image-avatar.png";
 
 import { CountContext } from "../../context/CountProductsContext";
 import { useContext } from "react";
+import Button from "../Button";
 
 interface UserProfileProps {
   onclick: () => void;
@@ -13,12 +14,17 @@ const Component = ({ onclick }: UserProfileProps) => {
   return (
     <>
       <div className="mr-6 flex cursor-pointer items-center lg:mr-10">
-        <button onClick={onclick}>
-          <div className="absolute right-16 top-4 my-1 rounded-lg bg-Pumpkin px-2 text-center text-[10px] font-bold text-white lg:right-52 lg:top-9">
-            {count}
-          </div>
-          <IconCart color="#69707D" />
-        </button>
+        <Button
+          content={
+            <>
+              <div className="absolute right-16 top-4 my-1 rounded-lg bg-Pumpkin px-2 text-center text-[10px] font-bold text-white lg:right-52 lg:top-9">
+                {count}
+              </div>
+              <IconCart color="#69707D" />
+            </>
+          }
+          onclick={onclick}
+        />
       </div>
       <div className="mr-8 flex items-center lg:mr-0">
         <img

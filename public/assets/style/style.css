@@ -29,4 +29,7 @@
   .desktop_carousel_btn {
     @apply absolute -mx-7 flex h-14 w-14 items-center justify-center rounded-full bg-white;
   }
+  .icon_close:hover {
+    fill: #ff7e1b;
+  }
 }
