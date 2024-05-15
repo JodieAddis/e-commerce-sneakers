@@ -1,16 +1,14 @@
 import Carousel from "../../components/Carousel";
 import CarouselDesktop from "../../components/CarouselDesktop";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Paragraph from "../../typographies/Paragraph";
 import { productImg } from "../../data";
 import ProductsPictures from "../../components/Products/ProductsPictures";
 import ProductsDescription from "../../components/Products/ProductsDescription";
 import ProductsContainer from "../../container/ProductsContainer";
 
 import useScreenSize from "../../hook/useScreenSize";
-import { useRef, useState } from "react";
-import { useClickOutside } from "../../hook/useClickOutside";
-import Footer from "../../components/Footer";
+import { useState } from "react";
 
 const Page = () => {
   const isMobile = useScreenSize();
