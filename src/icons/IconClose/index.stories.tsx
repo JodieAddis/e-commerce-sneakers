@@ -13,4 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const CloseIcon: Story = {
   name: "Close icon for a dropdown menu or other purposes",
+  args: {
+    color: "#000",
+  },
 };

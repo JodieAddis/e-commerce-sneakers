@@ -3,32 +3,49 @@ import IconClose from "../../icons/IconClose";
 import IconLogo from "../../icons/IconLogo";
 import IconMenu from "../../icons/IconMenu";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Button from "../Button";
+import { useClickOutside } from "../../hook/useClickOutside";
 
 const Component = () => {
   const [isClicked, setIsClicked] = useState<boolean>(true);
+
+  const navBarRef = useRef<HTMLDivElement>(null);
+
+  useClickOutside({ setState: setIsClicked, ref: navBarRef });
+
   return (
     <div className="ml-8 mt-6 flex flex-row">
       <div className="mr-4 flex items-center">
         {isClicked ? (
-          <button
-            onClick={() => {
+          <Button
+            content={
+              <>
+                <IconMenu />
+              </>
+            }
+            onclick={() => {
               setIsClicked(false);
             }}
-          >
-            <IconMenu />
-          </button>
+          />
         ) : (
-          <div className="fixed left-0 top-0 z-10 h-screen w-screen bg-black bg-opacity-75">
+          <div
+            className="fixed left-0 top-0 z-10 h-screen w-screen bg-black bg-opacity-75"
+            ref={navBarRef}
+          >
             <div className="absolute left-0 top-0 z-10 h-screen w-64 bg-white p-8">
-              <button
-                onClick={() => {
+              <Button
+                content={
+                  <>
+                    {" "}
+                    <IconClose color="#000000" />
+                  </>
+                }
+                css="mb-12"
+                onclick={() => {
                   setIsClicked(true);
                 }}
-                className="mb-12"
-              >
-                <IconClose color="#000000" />
-              </button>
+              />
               <ul>
                 <List content="collection" css="navbar_mobile my-4" />
                 <List content="men" css="navbar_mobile my-4" />

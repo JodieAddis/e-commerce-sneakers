@@ -1,6 +1,7 @@
 import Carousel from "../Carousel";
 import IconClose from "../../icons/IconClose";
 import { productImg } from "../../data";
+import Button from "../Button";
 
 interface CarouselDesktopProps {
   isClosed: () => void;
@@ -8,11 +9,16 @@ interface CarouselDesktopProps {
 
 const Component = ({ isClosed }: CarouselDesktopProps) => {
   return (
-    <div className="absolute left-1/3 top-10">
+    <div className="absolute left-1/3 top-20">
       <div className=" mb-8 flex justify-end">
-        <button onClick={isClosed}>
-          <IconClose color="#ffffff" />
-        </button>
+        <Button
+          content={
+            <>
+              <IconClose color="#ffffff" />
+            </>
+          }
+          onclick={isClosed}
+        />
       </div>
       <div className="mb-8">
         <Carousel
