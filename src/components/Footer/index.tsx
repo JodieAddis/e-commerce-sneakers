@@ -26,7 +26,7 @@ const Component = () => {
             </a>
           </>
         }
-        css="mb-3 flex items-center text-sm"
+        css="mb-3 flex items-center text-sm text-Shark"
       />
     </>
   );
