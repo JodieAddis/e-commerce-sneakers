@@ -15,10 +15,6 @@ const Page = () => {
   const isMobile = useScreenSize();
   const [isCarouselVisible, setIsCarouselVisible] = useState<boolean>(false);
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useClickOutside({ setState: setIsCarouselVisible, ref: dropdownRef });
-
   return (
     <div className="flex h-screen flex-col ">
       <header className="lg:mx-32 lg:mt-8">

@@ -9,7 +9,7 @@ interface CarouselDesktopProps {
 
 const Component = ({ isClosed }: CarouselDesktopProps) => {
   return (
-    <div className="absolute left-1/3 top-10">
+    <div className="absolute left-1/3 top-20">
       <div className=" mb-8 flex justify-end">
         <Button
           content={

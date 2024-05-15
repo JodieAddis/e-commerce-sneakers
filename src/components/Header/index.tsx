@@ -1,8 +1,8 @@
+import Cart from "../Cart";
 import NavBarDesktop from "../NavBarDesktop";
 import NavBarMobile from "../NavBarMobile";
 import UserProfile from "../UserProfile";
 import useScreenSize from "../../hook/useScreenSize";
-import Cart from "../Cart";
 import { useRef, useState } from "react";
 import { useClickOutside } from "../../hook/useClickOutside";
 
