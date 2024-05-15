@@ -10,10 +10,6 @@ const Component = () => {
 
   const totalPrice = 125 * count;
 
-  const removeItems = () => {
-    updateCount(0);
-  };
-
   return (
     <div className=" justify center flex w-[360px] flex-col rounded-xl bg-white shadow-lg">
       <div className="mt-6 px-6">
@@ -55,9 +51,16 @@ const Component = () => {
               </div>
             </div>
             <div className="flex cursor-pointer items-center">
-              <button onClick={removeItems}>
-                <IconDelete />
-              </button>
+              <Button
+                content={
+                  <>
+                    <IconDelete />
+                  </>
+                }
+                onclick={() => {
+                  updateCount(0);
+                }}
+              />
             </div>
           </div>
           <div className="my-8">

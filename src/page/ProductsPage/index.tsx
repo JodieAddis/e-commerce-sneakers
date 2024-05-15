@@ -1,13 +1,15 @@
 import Carousel from "../../components/Carousel";
 import CarouselDesktop from "../../components/CarouselDesktop";
 import Header from "../../components/Header";
+import Paragraph from "../../typographies/Paragraph";
 import { productImg } from "../../data";
 import ProductsPictures from "../../components/Products/ProductsPictures";
 import ProductsDescription from "../../components/Products/ProductsDescription";
 import ProductsContainer from "../../container/ProductsContainer";
 
 import useScreenSize from "../../hook/useScreenSize";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useClickOutside } from "../../hook/useClickOutside";
 
 const Page = () => {
   const isMobile = useScreenSize();
@@ -42,24 +44,30 @@ const Page = () => {
             )}
           </>
         )}
-        <div className="flex w-[327px] flex-col items-center justify-center lg:w-[445px]">
+        <div className="flex w-[327px] flex-col justify-center md:mt-10 md:w-[445px] lg:mt-0">
           <ProductsDescription />
-          <div className="mt-8 flex flex-col justify-center lg:mt-14 lg:flex-row lg:justify-between">
+          <div className="mt-8 flex flex-col justify-center md:flex-row md:justify-between lg:mt-14">
             <ProductsContainer />
           </div>
         </div>
       </main>
       <footer className=" mt-20 flex h-14 justify-center">
-        <p className="mb-3 flex items-center text-sm">
-          Application coded by
-          <a
-            href="https://github.com/JodieAddis"
-            target="blank_"
-            className="ml-1 hover:font-bold hover:text-Pumpkin"
-          >
-            Jodie Addis
-          </a>
-        </p>
+        <Paragraph
+          content={
+            <>
+              Application coded by{" "}
+              <a
+                href="https://github.com/JodieAddis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 hover:font-bold hover:text-Pumpkin"
+              >
+                Jodie Addis
+              </a>
+            </>
+          }
+          css="mb-3 flex items-center text-sm"
+        />
       </footer>
     </div>
   );
