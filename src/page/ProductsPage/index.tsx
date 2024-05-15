@@ -10,6 +10,7 @@ import ProductsContainer from "../../container/ProductsContainer";
 import useScreenSize from "../../hook/useScreenSize";
 import { useRef, useState } from "react";
 import { useClickOutside } from "../../hook/useClickOutside";
+import Footer from "../../components/Footer";
 
 const Page = () => {
   const isMobile = useScreenSize();
@@ -52,22 +53,7 @@ const Page = () => {
         </div>
       </main>
       <footer className=" mt-20 flex h-14 justify-center">
-        <Paragraph
-          content={
-            <>
-              Application coded by{" "}
-              <a
-                href="https://github.com/JodieAddis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-1 hover:font-bold hover:text-Pumpkin"
-              >
-                Jodie Addis
-              </a>
-            </>
-          }
-          css="mb-3 flex items-center text-sm"
-        />
+        <Footer />
       </footer>
     </div>
   );
