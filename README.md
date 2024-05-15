@@ -21,4 +21,9 @@ Photos can be viewed via a carousel by clicking on the main photo. The carousel 
 
 ## Technologies Used
 
-<img src="https://skillicons.dev/icons?i=git,vite,html,tailwind,ts,react"/>
+<img src="https://skillicons.dev/icons?i=vite,html,react,ts,tailwind"/>
+
+## About The Author
+
+- [LinkedIn](https://www.linkedin.com/in/jodieaddis/)
+<!-- - [Portfolio]() -->
